@@ -48,6 +48,7 @@ using Crestron.SimplSharp.CrestronIO;
 using System.IO;
 #endif
 using System.Text;
+using Console = Crestron.SimplSharp.Console;
 
 namespace WebSocketSharp
 	{

@@ -66,10 +66,10 @@ using SSMono.Net.Sockets;
 using Org.BouncyCastle.Crypto.Tls;
 using Org.BouncyCastle.X509;
 #elif SSL
-using Mono.Security.Protocol.Tls;
-using SSMono.Security.Cryptography.X509Certificates;
-using SSMono.Security.Authentication;
-using SSMono.Net.Security;
+//using Mono.Security.Protocol.Tls;
+using Crestron.SimplSharp.Cryptography.X509Certificates;
+using Crestron.SimplSharp.Security.Authentication;
+using Crestron.SimplSharp.Net.Security;
 #endif
 #else
 using System.Diagnostics;

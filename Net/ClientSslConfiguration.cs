@@ -35,6 +35,7 @@
  */
 #endregion
 
+
 #if !NETCF || BCC || SSL
 using System;
 #if SSHARP
@@ -42,11 +43,12 @@ using System;
 using Org.BouncyCastle.Crypto.Tls;
 using Org.BouncyCastle.X509;
 #elif SSL
-using Mono.Security.Protocol.Tls;
-using SSMono.Net.Security;
-using SSMono.Security.Cryptography.X509Certificates;
+//using Mono.Security.Protocol.Tls;
+using Crestron.SimplSharp.Net.Security;
+using Cresttron.SimplSharp.Net.Security;
+using Crestron.SimplSharp.Cryptography.X509Certificates;
 #endif
-using SSMono.Security.Authentication;
+using Crestron.SimplSharp.Security.Authentication;
 #else
 using System.Net.Security;
 using System.Security.Authentication;

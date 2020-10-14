@@ -54,6 +54,7 @@
 
 using System;
 using System.Collections.Generic;
+using Crestron.SimplSharp.Cryptography.X509Certificates;
 #if SSHARP
 using Crestron.SimplSharp;
 using Crestron.SimplSharp.CrestronIO;
@@ -66,7 +67,7 @@ using SSMono.Net.Sockets;
 using SSMono.Net;
 #if BCC
 #elif SSL
-using SSMono.Net.Security;
+using Crestron.SimplSharp.Net.Security;
 #endif
 #else
 using System.IO;
@@ -126,7 +127,7 @@ namespace WebSocketSharp.Net
 				var sslConf = listener.SslConfiguration;
 				var sslStream = new SslStream (netStream, false, sslConf.ClientCertificateValidationCallback);
 
-				sslStream.AuthenticateAsServer (sslConf.ServerCertificate, sslConf.ClientCertificateRequired, sslConf.EnabledSslProtocols,
+				sslStream.AuthenticateAsServer ((X509Certificate) sslConf.ServerCertificate, sslConf.ClientCertificateRequired, sslConf.EnabledSslProtocols,
 					sslConf.CheckCertificateRevocation);
 
 				_secure = true;

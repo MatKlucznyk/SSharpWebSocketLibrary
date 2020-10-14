@@ -40,11 +40,11 @@ using System;
 #if SSHARP
 #if BCC
 #elif SSL
-using SSMono.Security.Cryptography.X509Certificates;
-using Mono.Security.Protocol.Tls;
-using SSMono.Net.Security;
+using Crestron.SimplSharp.Cryptography.X509Certificates;
+//using Mono.Security.Protocol.Tls;
+using Crestron.SimplSharp.Net.Security;
 #endif
-using SSMono.Security.Authentication;
+using Crestron.SimplSharp.Security.Authentication;
 #else
 using System.Net.Security;
 using System.Security.Authentication;

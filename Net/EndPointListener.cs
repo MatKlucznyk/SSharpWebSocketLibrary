@@ -65,7 +65,7 @@ using IAsyncResult = Crestron.SimplSharp.CrestronIO.IAsyncResult;
 using AsyncCallback = Crestron.SimplSharp.CrestronIO.AsyncCallback;
 using Environment = Crestron.SimplSharp.CrestronEnvironmentEx;
 using SSMono.Web;
-using SSMono.Security.Cryptography;
+using Crestron.SimplSharp.Cryptography;
 using SSMono.Security.Cryptography.X509Certificates;
 
 #else
@@ -245,7 +245,7 @@ namespace WebSocketSharp.Net
 				var cer = Path.Combine (folderPath, String.Format ("{0}.cer", port));
 				var key = Path.Combine (folderPath, String.Format ("{0}.key", port));
 				if (File.Exists (cer) && File.Exists (key))
-					{
+				{
 					var cert = new X509Certificate2 (cer);
 					cert.PrivateKey = createRSAFromFile (key);
 
