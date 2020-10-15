@@ -37,7 +37,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using Crestron.SimplSharp.Cryptography.X509Certificates;
+
 #if SSHARP
 using Crestron.SimplSharp;
 using Crestron.SimplSharp.CrestronIO;
@@ -46,6 +46,7 @@ using Crestron.SimplSharp.CrestronSockets;
 using SSMono.Security.Principal;
 using SSMono.Net;
 using SSMono.Web;
+using Org.BouncyCastle.X509;
 #if BUFFERED
 using SSMono.Net.Sockets;
 #endif

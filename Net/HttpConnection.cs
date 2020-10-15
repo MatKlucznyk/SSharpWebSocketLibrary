@@ -54,7 +54,6 @@
 
 using System;
 using System.Collections.Generic;
-using Crestron.SimplSharp.Cryptography.X509Certificates;
 #if SSHARP
 using Crestron.SimplSharp;
 using Crestron.SimplSharp.CrestronIO;
@@ -65,6 +64,7 @@ using Crestron.SimplSharp.CrestronSockets;
 using Socket = Crestron.SimplSharp.CrestronSockets.CrestronServerSocket;
 using SSMono.Net.Sockets;
 using SSMono.Net;
+using Org.BouncyCastle.X509;
 #if BCC
 #elif SSL
 using Crestron.SimplSharp.Net.Security;

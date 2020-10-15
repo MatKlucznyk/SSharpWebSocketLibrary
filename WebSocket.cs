@@ -1650,9 +1650,11 @@ namespace WebSocketSharp
 		private void open ()
 			{
 			_inMessage = true;
+		    _logger.Debug("Starting Receive");
 			startReceiving ();
 			try
-				{
+			{
+			    _logger.Debug("Sending OnOpen event");
 				OnOpen.Emit (this, EventArgs.Empty);
 				}
 			catch (Exception ex)
@@ -3581,8 +3583,9 @@ namespace WebSocketSharp
 				var msg = "A series of reconnecting has failed.";
 				throw new InvalidOperationException (msg);
 				}
-
-			if (connect ())
+		    _logger.Debug("Attempting Connection to {0}", Url);
+		    if (connect())
+		        _logger.Debug("Connection successful, opening stream");
 				open ();
 			}
 

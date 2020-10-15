@@ -65,7 +65,7 @@ using IAsyncResult = Crestron.SimplSharp.CrestronIO.IAsyncResult;
 using AsyncCallback = Crestron.SimplSharp.CrestronIO.AsyncCallback;
 using Environment = Crestron.SimplSharp.CrestronEnvironmentEx;
 using SSMono.Web;
-using Crestron.SimplSharp.Cryptography;
+using SSMono.Security.Cryptography;
 using SSMono.Security.Cryptography.X509Certificates;
 
 #else
